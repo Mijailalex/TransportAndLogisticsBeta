@@ -1,0 +1,310 @@
+/* ===================================
+   PERU LOGISTICS - TIMELINE CRONOLÓGICO MEJORADO
+   =================================== */
+
+/* Timeline Container Principal */
+.timeline {
+    position: relative;
+    margin: 4rem 0;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, 
+        var(--secondary-color) 0%, 
+        var(--primary-color) 50%, 
+        var(--secondary-color) 100%);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(237, 137, 54, 0.3);
+}
+
+/* Timeline Items con Diseño Alternado */
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alternancia: Items pares a la izquierda, impares a la derecha */
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+    padding-right: 55%;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+    padding-left: 55%;
+}
+
+/* Año Central con Diseño Circular */
+.timeline-year {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+    color: var(--white);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 
+        0 0 0 4px var(--white),
+        0 0 0 8px var(--secondary-color),
+        0 10px 30px rgba(237, 137, 54, 0.4);
+    z-index: 10;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-year::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse-ring 2s ease-in-out infinite;
+}
+
+/* Content Cards con Efecto Glass */
+.timeline-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius-xl);
+    padding: 2.5rem;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 400px;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+}
+
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 15px rgba(237, 137, 54, 0.4);
+}
+
+/* Posicionamiento de conectores */
+.timeline-item:nth-child(odd) .timeline-content::after {
+    right: -35px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: -35px;
+}
+
+/* Hover Effects Mejorados */
+.timeline-content:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.15),
+        0 15px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 1);
+    border-color: var(--secondary-color);
+}
+
+.timeline-item:hover .timeline-year {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 
+        0 0 0 4px var(--white),
+        0 0 0 8px var(--secondary-color),
+        0 15px 40px rgba(237, 137, 54, 0.6);
+}
+
+/* Contenido de Texto */
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.timeline-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--secondary-color);
+    border-radius: 1px;
+}
+
+.timeline-content p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Efectos Decorativos */
+.timeline-content .icon {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 0.9rem;
+    box-shadow: 0 5px 15px rgba(237, 137, 54, 0.3);
+}
+
+/* Animaciones Avanzadas */
+@keyframes pulse-ring {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes timeline-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        flex-direction: column;
+        padding: 0 2rem;
+        text-align: center;
+    }
+    
+    .timeline::before {
+        left: 2rem;
+        transform: none;
+    }
+    
+    .timeline-year {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-bottom: 2rem;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .timeline-content::after {
+        display: none;
+    }
+    
+    .timeline-content {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        margin: 2rem 0;
+        padding: 1rem;
+    }
+    
+    .timeline-item {
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+    
+    .timeline-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-year {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+}
+
+/* Estados de Animación Escalonada */
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+.timeline-item:nth-child(5) { animation-delay: 0.5s; }
+.timeline-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Efectos de Progreso */
+.timeline-progress {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    background: var(--secondary-color);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    height: 0;
+    transition: height 1s ease-out;
+    z-index: 1;
+}
+
+.timeline-progress.active {
+    height: 100%;
+}
