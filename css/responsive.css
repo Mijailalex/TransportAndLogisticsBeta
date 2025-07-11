@@ -1,0 +1,944 @@
+/* ===================================
+   PERU LOGISTICS - RESPONSIVE STYLES
+   =================================== */
+
+/* Large Screens */
+@media (max-width: 1400px) {
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 4vw, 3rem);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+/* Medium-Large Screens */
+@media (max-width: 1200px) {
+    :root {
+        --max-width: 960px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-container {
+        gap: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .content-grid {
+        gap: 3rem;
+    }
+    
+    .vision-mision-grid {
+        gap: 2rem;
+    }
+    
+    .objectives-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .warehouse-specs .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advanced-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium Screens */
+@media (max-width: 992px) {
+    /* Navigation */
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        padding: 2rem 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        padding: 20px;
+        color: var(--dark-color);
+        justify-content: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-link:hover,
+    .nav-item.active .nav-link {
+        color: var(--primary-color);
+        background-color: var(--light-color);
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    /* Dropdown adjustments */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background-color: var(--light-color);
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .dropdown-menu a {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* Page Header */
+    .page-header {
+        padding: 80px 0 50px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Content Grids */
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .content-grid.reverse {
+        direction: ltr;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .responsibility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cases-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Timeline */
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        justify-content: flex-start;
+        flex-direction: row;
+        padding-left: 80px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    
+    .timeline-year {
+        position: absolute;
+        left: 0;
+        min-width: 60px;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    
+    .timeline-content {
+        margin: 0;
+        max-width: none;
+    }
+    
+    /* Vision/Mission */
+    .vision-mision-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .feature-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Internal Navigation */
+    .tab-nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 0 10px 0;
+    }
+    
+    .tab-link {
+        white-space: nowrap;
+        min-width: max-content;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Small-Medium Screens */
+@media (max-width: 768px) {
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    /* Spacing */
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .hero {
+        padding: 80px 0 50px;
+    }
+    
+    .page-header {
+        padding: 60px 0 40px;
+    }
+    
+    .slider-section {
+        padding: 60px 0;
+    }
+    
+    .features {
+        padding: 60px 0;
+    }
+    
+    .news {
+        padding: 60px 0;
+    }
+    
+    .cta {
+        padding: 60px 0;
+    }
+    
+    /* Grids */
+    .features-grid,
+    .services-grid,
+    .news-grid,
+    .values-grid,
+    .benefits-grid,
+    .responsibility-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .stats-grid,
+    .impact-stats,
+    .feature-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .objectives-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advanced-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-results {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Cards */
+    .feature-card,
+    .service-card,
+    .news-card,
+    .value-card,
+    .benefit-card,
+    .responsibility-card {
+        padding: 1.5rem;
+    }
+    
+    .vision-card,
+    .mision-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .case-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Slider */
+    .slider {
+        height: 300px;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .slider-controls {
+        padding: 0 10px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Timeline */
+    .timeline-year {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+        min-width: 50px;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn,
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 40px 0 15px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 576px) {
+    /* Container */
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* Navigation */
+    .nav-container {
+        padding: 0 10px;
+        height: 70px;
+    }
+    
+    #header {
+        height: 70px;
+    }
+    
+    .nav-menu {
+        top: 70px;
+        height: calc(100vh - 70px);
+    }
+    
+    .nav-logo img {
+        height: 40px;
+    }
+    
+    /* Typography */
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-content p,
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    /* Spacing */
+    .hero {
+        margin-top: 70px;
+        padding: 60px 0 40px;
+    }
+    
+    .page-header {
+        margin-top: 70px;
+        padding: 50px 0 30px;
+    }
+    
+    .content-section {
+        padding: 40px 0;
+    }
+    
+    .slider-section,
+    .features,
+    .news,
+    .cta {
+        padding: 40px 0;
+    }
+    
+    /* Hero */
+    .hero-container {
+        gap: 2rem;
+    }
+    
+    .hero-buttons {
+        gap: 0.8rem;
+    }
+    
+    /* Cards */
+    .feature-card,
+    .service-card,
+    .news-card,
+    .value-card,
+    .benefit-card,
+    .responsibility-card,
+    .case-card {
+        padding: 1.2rem;
+    }
+    
+    .vision-card,
+    .mision-card {
+        padding: 1.5rem 1.2rem;
+    }
+    
+    /* Icons */
+    .feature-icon,
+    .service-icon,
+    .benefit-icon,
+    .value-icon {
+        font-size: 2.5rem;
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+    }
+    
+    /* Slider */
+    .slider {
+        height: 250px;
+    }
+    
+    .slider-container {
+        margin: 0 -10px;
+        border-radius: 0;
+    }
+    
+    /* Stats */
+    .stat-item,
+    .impact-item {
+        padding: 1rem;
+    }
+    
+    .stat h4,
+    .impact-item h4,
+    .stat-item h4 {
+        font-size: 2rem;
+    }
+    
+    /* Timeline */
+    .timeline {
+        margin: 2rem 0;
+    }
+    
+    .timeline-item {
+        margin-bottom: 2rem;
+        padding-left: 70px;
+    }
+    
+    .timeline::before {
+        left: 25px;
+    }
+    
+    .timeline-year {
+        left: 0;
+        font-size: 0.7rem;
+        padding: 5px 8px;
+        min-width: 45px;
+    }
+    
+    .timeline-content {
+        padding: 1.2rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Internal Navigation */
+    .internal-nav {
+        top: 70px;
+        padding: 15px 0;
+    }
+    
+    .tab-nav {
+        gap: 0.5rem;
+        padding: 0 10px 10px 0;
+    }
+    
+    .tab-link {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    
+    /* Transport/Storage Types */
+    .transport-type,
+    .storage-type,
+    .platform {
+        padding: 1.2rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .transport-type i,
+    .storage-type i,
+    .platform i {
+        margin-top: 0;
+    }
+    
+    /* Feature Groups */
+    .feature-group {
+        padding: 1.5rem;
+    }
+    
+    /* Advantages Lists */
+    .advantages-list li,
+    .additional-services li,
+    .culture-list li {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    /* Warehouse Features */
+    .warehouse-features {
+        padding: 1.5rem;
+    }
+    
+    .feature {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    /* Tech Mockup */
+    .tech-mockup,
+    .integration-benefits {
+        padding: 1.5rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 30px 0 10px;
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+    }
+    
+    .footer-logo img {
+        height: 50px;
+    }
+    
+    .social-links {
+        gap: 0.8rem;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social-link i {
+        font-size: 1rem;
+    }
+    
+    /* Scroll to Top */
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 420px) {
+    /* Typography */
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    /* Navigation */
+    .nav-logo img {
+        height: 35px;
+    }
+    
+    .nav-container {
+        height: 60px;
+    }
+    
+    #header {
+        height: 60px;
+    }
+    
+    .nav-menu {
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+    
+    /* Hero */
+    .hero {
+        margin-top: 60px;
+        padding: 50px 0 30px;
+    }
+    
+    .page-header {
+        margin-top: 60px;
+        padding: 40px 0 25px;
+    }
+    
+    /* Spacing */
+    .content-section {
+        padding: 30px 0;
+    }
+    
+    .slider-section,
+    .features,
+    .news,
+    .cta {
+        padding: 30px 0;
+    }
+    
+    /* Cards */
+    .feature-card,
+    .service-card,
+    .news-card,
+    .value-card,
+    .benefit-card,
+    .responsibility-card,
+    .case-card {
+        padding: 1rem;
+    }
+    
+    /* Icons */
+    .feature-icon,
+    .service-icon,
+    .benefit-icon,
+    .value-icon,
+    .card-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Slider */
+    .slider {
+        height: 200px;
+    }
+    
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    /* Stats */
+    .stat h4,
+    .impact-item h4,
+    .stat-item h4 {
+        font-size: 1.8rem;
+    }
+    
+    /* Internal Navigation */
+    .internal-nav {
+        top: 60px;
+    }
+    
+    .tab-link {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+    
+    /* Timeline */
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-year {
+        font-size: 0.6rem;
+        padding: 4px 6px;
+        min-width: 40px;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+    
+    /* Footer */
+    .social-link {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .social-link i {
+        font-size: 0.9rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .navbar,
+    .nav-toggle,
+    .slider-controls,
+    .slider-dots,
+    .scroll-to-top,
+    .cta,
+    .footer {
+        display: none !important;
+    }
+    
+    .hero,
+    .page-header {
+        margin-top: 0 !important;
+        background: white !important;
+        color: black !important;
+    }
+    
+    .content-section {
+        padding: 20px 0 !important;
+    }
+    
+    .container {
+        max-width: none !important;
+        padding: 0 !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        color: black !important;
+    }
+    
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    .feature-card,
+    .service-card,
+    .news-card,
+    .value-card,
+    .benefit-card {
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .nav-logo img,
+    .footer-logo img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Landscape Orientation on Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding: 40px 0 30px;
+    }
+    
+    .page-header {
+        padding: 30px 0 20px;
+    }
+    
+    .slider {
+        height: 200px;
+    }
+    
+    .nav-menu {
+        height: calc(100vh - 60px);
+        padding: 1rem 0;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    /* This can be implemented if needed */
+    /* Currently using light theme only */
+}

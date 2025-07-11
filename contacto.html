@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Peru Logistics - Solicita cotizaciones y información sobre nuestros servicios logísticos">
+    <title>Contacto - Peru Logistics</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="img/PeruLogistics.png" alt="Peru Logistics" width="280" height="90">
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i> INICIO
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="nosotros.html" class="nav-link">
+                            <i class="fas fa-users"></i> NOSOTROS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="nosotros.html#quienes-somos">¿Quiénes Somos?</a></li>
+                            <li><a href="nosotros.html#historia">Historia</a></li>
+                            <li><a href="nosotros.html#valores">Valores</a></li>
+                            <li><a href="nosotros.html#cultura">Cultura</a></li>
+                            <li><a href="nosotros.html#responsabilidad">Responsabilidad Social</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="servicios.html" class="nav-link">
+                            <i class="fas fa-truck"></i> SERVICIOS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="servicios.html#transporte">Transporte</a></li>
+                            <li><a href="servicios.html#almacen">Almacén</a></li>
+                            <li><a href="servicios.html#gestion">Sistemas de Gestión</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="contacto.html" class="nav-link">
+                            <i class="fas fa-envelope"></i> CONTACTO
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte con todas tus necesidades logísticas</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Solicita tu Cotización</h2>
+                    <p>Completa el formulario y te contactaremos en menos de 24 horas</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nombre *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Apellidos *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Empresa</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="position">Cargo</label>
+                                <input type="text" id="position" name="position">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Tipo de Servicio *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="transporte">Transporte de Carga</option>
+                                <option value="almacen">Almacenamiento</option>
+                                <option value="gestion">Sistemas de Gestión</option>
+                                <option value="integral">Solución Integral</option>
+                                <option value="consulta">Consultoría Logística</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="origin">Ciudad de Origen</label>
+                                <input type="text" id="origin" name="origin" placeholder="Ej: Lima">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Ciudad de Destino</label>
+                                <input type="text" id="destination" name="destination" placeholder="Ej: Arequipa">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cargoType">Tipo de Carga</label>
+                                <select id="cargoType" name="cargoType">
+                                    <option value="">Selecciona tipo de carga</option>
+                                    <option value="seca">Carga Seca</option>
+                                    <option value="refrigerada">Carga Refrigerada</option>
+                                    <option value="peligrosa">Carga Peligrosa</option>
+                                    <option value="pesada">Carga Pesada</option>
+                                    <option value="fragil">Carga Frágil</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weight">Peso Aproximado (kg)</label>
+                                <input type="number" id="weight" name="weight" placeholder="Ej: 1000">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="urgency">Urgencia</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="baja">
+                                    <span class="radio-custom"></span>
+                                    Baja (5-7 días)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="media">
+                                    <span class="radio-custom"></span>
+                                    Media (2-4 días)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="alta">
+                                    <span class="radio-custom"></span>
+                                    Alta (24-48 hrs)
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje Adicional</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Describe tus necesidades específicas, horarios de recojo, entrega, o cualquier requerimiento especial..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" required>
+                                <span class="checkbox-custom"></span>
+                                Acepto los <a href="#" class="terms-link">términos y condiciones</a> y la <a href="#" class="privacy-link">política de privacidad</a> *
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter">
+                                <span class="checkbox-custom"></span>
+                                Deseo recibir noticias y promociones de Peru Logistics
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <div class="contact-info-card">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Oficina Principal</h4>
+                                <p>Av. Reducto 1920<br>Edificio Reducto - Oficina 602<br>Miraflores, Lima - Perú</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Teléfonos</h4>
+                                <p>Central: (+51) 943 264 528<br>Ventas: (+51) 943 264 529<br>Emergencias 24/7: (+51) 943 264 530</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Emails</h4>
+                                <p>info@perulogistics.com<br>ventas@perulogistics.com<br>soporte@perulogistics.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Horarios de Atención</h4>
+                                <p>Lunes a Viernes: 8:00 AM - 6:00 PM<br>Sábados: 8:00 AM - 1:00 PM<br>Emergencias: 24/7</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-section">
+                            <h4>Síguenos en Redes Sociales</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-link linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="#" class="social-link twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Contact -->
+                    <div class="quick-contact-card">
+                        <h3>Contacto Rápido</h3>
+                        <p>¿Necesitas una respuesta inmediata?</p>
+                        
+                        <div class="quick-options">
+                            <a href="tel:+51943264528" class="quick-option call">
+                                <i class="fas fa-phone"></i>
+                                <span>Llamar Ahora</span>
+                            </a>
+                            
+                            <a href="https://wa.me/51943264528" class="quick-option whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            
+                            <a href="mailto:info@perulogistics.com" class="quick-option email">
+                                <i class="fas fa-envelope"></i>
+                                <span>Enviar Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Peru Logistics</h3>
+                        <p>Av. Reducto 1920, Edificio Reducto - Oficina 602<br>Miraflores, Lima - Perú</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline">Ver en Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offices Section -->
+    <section class="offices-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Nuestras Oficinas</h2>
+            <p class="section-subtitle">Presencia nacional para estar siempre cerca de ti</p>
+            
+            <div class="offices-grid">
+                <div class="office-card">
+                    <div class="office-header">
+                        <h3>Lima - Sede Principal</h3>
+                        <span class="office-type">Oficina Administrativa</span>
+                    </div>
+                    <div class="office-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Reducto 1920, Miraflores</p>
+                        <p><i class="fas fa-phone"></i> (+51) 943 264 528</p>
+                        <p><i class="fas fa-envelope"></i> lima@perulogistics.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-header">
+                        <h3>Arequipa</h3>
+                        <span class="office-type">Centro de Distribución</span>
+                    </div>
+                    <div class="office-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Parque Industrial APIMA</p>
+                        <p><i class="fas fa-phone"></i> (+51) 943 264 531</p>
+                        <p><i class="fas fa-envelope"></i> arequipa@perulogistics.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-header">
+                        <h3>Trujillo</h3>
+                        <span class="office-type">Centro de Distribución</span>
+                    </div>
+                    <div class="office-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Zona Industrial El Porvenir</p>
+                        <p><i class="fas fa-phone"></i> (+51) 943 264 532</p>
+                        <p><i class="fas fa-envelope"></i> trujillo@perulogistics.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-header">
+                        <h3>Cusco</h3>
+                        <span class="office-type">Oficina Regional</span>
+                    </div>
+                    <div class="office-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. De La Cultura 1245</p>
+                        <p><i class="fas fa-phone"></i> (+51) 943 264 533</p>
+                        <p><i class="fas fa-envelope"></i> cusco@perulogistics.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-header">
+                        <h3>Chiclayo</h3>
+                        <span class="office-type">Centro de Operaciones</span>
+                    </div>
+                    <div class="office-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Carretera Panamericana Norte Km 6</p>
+                        <p><i class="fas fa-phone"></i> (+51) 943 264 534</p>
+                        <p><i class="fas fa-envelope"></i> chiclayo@perulogistics.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-header">
+                        <h3>Iquitos</h3>
+                        <span class="office-type">Oficina Regional</span>
+                    </div>
+                    <div class="office-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Abelardo Quiñones 1532</p>
+                        <p><i class="fas fa-phone"></i> (+51) 943 264 535</p>
+                        <p><i class="fas fa-envelope"></i> iquitos@perulogistics.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuánto tiempo toma recibir una cotización?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nuestro equipo comercial responde todas las solicitudes de cotización en un máximo de 24 horas. Para servicios estándar, generalmente respondemos en 2-4 horas durante horario laboral.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen servicios de tracking en tiempo real?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, todos nuestros servicios incluyen tracking GPS en tiempo real. Los clientes pueden monitorear sus envíos 24/7 a través de nuestra plataforma web o aplicación móvil.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Manejan carga internacional?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos servicios de transporte internacional terrestre hacia países vecinos y servicios multimodales (marítimo/aéreo) a través de nuestros partners estratégicos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Qué certificaciones tienen?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Contamos con certificaciones ISO 9001:2015, HACCP para productos alimentarios, GDP para productos farmacéuticos, y certificaciones de seguridad OHSAS 18001.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen atención 24/7?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nuestro centro de monitoreo y emergencias opera 24/7. Para consultas comerciales, nuestro horario es de Lunes a Viernes de 8:00 AM a 6:00 PM, y Sábados de 8:00 AM a 1:00 PM.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuál es el tiempo de entrega promedio?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Los tiempos varían según la ruta: Lima-Arequipa (24-48h), Lima-Trujillo (18-24h), Lima-Cusco (36-48h). Ofrecemos servicios express con entregas en 50% menos tiempo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="img/PeruLogistics.png" alt="Peru Logistics">
+                    </div>
+                    <p>Servicios garantizados a través de los años, cumpliendo con los estándares y con una calidad de servicio superior al mercado nacional.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Nosotros</h3>
+                    <ul>
+                        <li><a href="nosotros.html">Quiénes Somos</a></li>
+                        <li><a href="nosotros.html#historia">Historia</a></li>
+                        <li><a href="nosotros.html#valores">Valores</a></li>
+                        <li><a href="nosotros.html#cultura">Cultura</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="servicios.html#transporte">Transporte</a></li>
+                        <li><a href="servicios.html#almacen">Almacén</a></li>
+                        <li><a href="servicios.html#gestion">Sistemas de Gestión</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> (+51) 943 264 528</p>
+                        <p><i class="fas fa-envelope"></i> info@perulogistics.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Reducto 1920, Edificio Reducto - Oficina 602</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <hr>
+                <p>&copy; 2024 Peru Logistics. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
