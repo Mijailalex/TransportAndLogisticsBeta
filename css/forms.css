@@ -1,22 +1,22 @@
 /* ===================================
-   PERU LOGISTICS - FORMS & INTERACTIVE ELEMENTS
+   PERU LOGISTICS - FORMULARIOS Y ELEMENTOS INTERACTIVOS PROFESIONALES
    =================================== */
 
-/* Form Container Glassmorphism */
+/* Form Container Profesional */
 .contact-form {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    background: var(--white);
+    border: 1px solid var(--gray-200);
     border-radius: var(--border-radius-xl);
     padding: 0;
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 /* Form Groups */
 .form-group {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-row {
@@ -25,13 +25,13 @@
     gap: 1.5rem;
 }
 
-/* Labels with Floating Effect */
+/* Labels Profesionales */
 .form-group label {
     display: block;
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-    color: var(--white);
-    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 0.9rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
@@ -39,38 +39,37 @@
 .form-group label::after {
     content: '';
     position: absolute;
-    bottom: -4px;
+    bottom: -2px;
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--gradient-secondary);
+    background: var(--secondary-color);
     transition: width 0.3s ease;
 }
 
 .form-group:focus-within label::after {
-    width: 30px;
+    width: 25px;
 }
 
-/* Input Fields Enhanced */
+/* Input Fields Elegantes */
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 16px 20px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 16px;
+    border: 2px solid var(--gray-200);
     border-radius: var(--border-radius);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-family: inherit;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    color: var(--white);
+    background: var(--white);
+    color: var(--primary-color);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--gray-400);
     transition: all 0.3s ease;
 }
 
@@ -78,24 +77,22 @@
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 
-        0 0 0 4px rgba(37, 99, 235, 0.1),
-        0 8px 25px rgba(37, 99, 235, 0.15);
-    transform: translateY(-2px);
+    border-color: var(--secondary-color);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(237, 137, 54, 0.1);
+    transform: translateY(-1px);
 }
 
 .form-group input:focus::placeholder,
 .form-group textarea:focus::placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-20px) scale(0.9);
+    color: var(--gray-300);
+    transform: translateY(-2px);
 }
 
-/* Select Styling */
+/* Select Styling Profesional */
 .form-group select {
     cursor: pointer;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
     background-position: right 12px center;
     background-repeat: no-repeat;
     background-size: 16px;
@@ -104,8 +101,8 @@
 }
 
 .form-group select option {
-    background: var(--dark-color);
-    color: var(--white);
+    background: var(--white);
+    color: var(--primary-color);
     padding: 10px;
 }
 
@@ -113,15 +110,15 @@
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-/* Validation States */
+/* Estados de Validación */
 .form-group input.error,
 .form-group select.error,
 .form-group textarea.error {
     border-color: #ef4444;
-    background: rgba(239, 68, 68, 0.1);
+    background: rgba(239, 68, 68, 0.05);
     animation: shake 0.5s ease-in-out;
 }
 
@@ -129,7 +126,7 @@
 .form-group select.success,
 .form-group textarea.success {
     border-color: var(--accent-color);
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(56, 161, 105, 0.05);
 }
 
 .form-group input.success::after,
@@ -137,32 +134,31 @@
 .form-group textarea.success::after {
     content: '✓';
     position: absolute;
-    right: 15px;
+    right: 12px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--accent-color);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
-/* Error Messages */
+/* Mensajes de Error */
 .error-message {
     display: block;
     color: #ef4444;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
     background: rgba(239, 68, 68, 0.1);
-    border: 1px solid rgba(239, 68, 68, 0.3);
+    border: 1px solid rgba(239, 68, 68, 0.2);
     border-radius: var(--border-radius);
-    backdrop-filter: blur(10px);
     animation: slideInUp 0.3s ease-out;
 }
 
-/* Radio Buttons Enhanced */
+/* Radio Buttons Elegantes */
 .radio-group {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
     margin-top: 1rem;
 }
@@ -173,44 +169,28 @@
     gap: 0.8rem;
     cursor: pointer;
     user-select: none;
-    padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 16px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
     border-radius: var(--border-radius);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.radio-label::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-    transition: left 0.6s ease;
-}
-
-.radio-label:hover::before {
-    left: 100%;
-}
-
 .radio-label:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+    background: var(--white);
+    border-color: var(--secondary-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
 }
 
 .radio-custom {
-    width: 24px;
-    height: 24px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gray-300);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: var(--white);
     transition: all 0.3s ease;
     position: relative;
     flex-shrink: 0;
@@ -225,15 +205,15 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + .radio-custom {
-    background: var(--gradient-primary);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(237, 137, 54, 0.3);
 }
 
 input[type="radio"]:checked + .radio-custom::after {
     content: '';
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: var(--white);
     position: absolute;
@@ -243,25 +223,24 @@ input[type="radio"]:checked + .radio-custom::after {
     animation: radioScale 0.3s ease-out;
 }
 
-/* Checkbox Enhanced */
+/* Checkbox Elegante */
 .checkbox-label {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     cursor: pointer;
     user-select: none;
-    padding: 15px 0;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
+    padding: 12px 0;
+    color: var(--gray-600);
+    line-height: 1.5;
 }
 
 .checkbox-custom {
-    width: 24px;
-    height: 24px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gray-300);
+    border-radius: 4px;
+    background: var(--white);
     transition: all 0.3s ease;
     position: relative;
     flex-shrink: 0;
@@ -277,16 +256,15 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked + .checkbox-custom {
-    background: var(--gradient-primary);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
-    transform: scale(1.05);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(237, 137, 54, 0.3);
 }
 
 input[type="checkbox"]:checked + .checkbox-custom::after {
     content: '✓';
     color: var(--white);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     position: absolute;
     top: 50%;
@@ -295,19 +273,23 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     animation: checkmarkScale 0.3s ease-out;
 }
 
-/* Submit Button Enhanced */
+/* Submit Button Profesional */
 .btn-submit {
     width: 100%;
     margin-top: 2rem;
     position: relative;
-    background: var(--gradient-primary);
+    background: var(--secondary-color);
     border: none;
-    padding: 18px 32px;
-    font-size: 1.1rem;
-    font-weight: 700;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     overflow: hidden;
+    border-radius: var(--border-radius);
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn-submit::before {
@@ -317,7 +299,7 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
     transition: left 0.6s ease;
 }
 
@@ -325,20 +307,27 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     left: 100%;
 }
 
+.btn-submit:hover {
+    background: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
 .btn-submit:disabled {
-    opacity: 0.8;
+    opacity: 0.7;
     cursor: not-allowed;
     transform: none !important;
 }
 
 .btn-submit:disabled:hover {
     transform: none !important;
+    background: var(--secondary-color);
 }
 
-/* Links in Forms */
+/* Links en Formularios */
 .terms-link,
 .privacy-link {
-    color: var(--secondary-light);
+    color: var(--secondary-color);
     text-decoration: underline;
     transition: all 0.3s ease;
     position: relative;
@@ -346,79 +335,35 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 
 .terms-link:hover,
 .privacy-link:hover {
-    color: var(--secondary-color);
-    text-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+    color: var(--secondary-dark);
+    text-decoration: none;
 }
 
-/* Loading Spinner Enhanced */
+/* Loading Spinner */
 .loading-spinner {
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     border-top-color: var(--white);
     animation: spin 1s linear infinite;
 }
 
-/* CTA Stats */
-.cta-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-    padding: 2rem 0;
-}
-
-.cta-stat {
-    text-align: center;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--border-radius-lg);
-    transition: all 0.3s ease;
-}
-
-.cta-stat:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.cta-stat .stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: var(--gradient-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-}
-
-.cta-stat .stat-label {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Notifications Enhanced */
+/* Notificaciones Profesionales */
 .notification {
     position: fixed;
     top: 20px;
     right: 20px;
-    max-width: 420px;
+    max-width: 400px;
     border-radius: var(--border-radius-lg);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--gray-200);
     z-index: 10000;
     transform: translateX(120%);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    box-shadow: var(--shadow-xl);
 }
 
 .notification.show {
@@ -426,7 +371,7 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 }
 
 .notification-success {
-    background: rgba(16, 185, 129, 0.95);
+    background: rgba(56, 161, 105, 0.95);
     border-left: 4px solid var(--accent-color);
 }
 
@@ -436,20 +381,20 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 }
 
 .notification-info {
-    background: rgba(59, 130, 246, 0.95);
+    background: rgba(45, 55, 72, 0.95);
     border-left: 4px solid var(--primary-color);
 }
 
 .notification-content {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 1.2rem 1.5rem;
+    gap: 12px;
+    padding: 1rem 1.5rem;
     color: white;
 }
 
 .notification-content i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     flex-shrink: 0;
 }
 
@@ -461,7 +406,7 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     color: white;
     opacity: 0.8;
     transition: all 0.3s ease;
-    padding: 8px;
+    padding: 6px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -475,7 +420,7 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 }
 
 .notification-progress {
-    height: 4px;
+    height: 3px;
     background: rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
@@ -491,11 +436,227 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     animation: progress-bar var(--duration) linear;
 }
 
-/* Animations */
+/* Timeline Profesional */
+.timeline {
+    position: relative;
+    margin: 3rem 0;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -2rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 80px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+
+.timeline-content {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.timeline-content p {
+    color: var(--gray-600);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Vision/Mision Cards */
+.vision-mision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.vision-card,
+.mision-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    padding: 3rem 2.5rem;
+    border-radius: var(--border-radius-xl);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-card::before,
+.mision-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--secondary-color);
+}
+
+.vision-card:hover,
+.mision-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--secondary-color);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.vision-card h3,
+.mision-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.vision-card p,
+.mision-card p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Values Grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.value-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    padding: 2rem;
+    border-radius: var(--border-radius-xl);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--secondary-color);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.value-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.value-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Objectives Grid */
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.objective-item {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.objective-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.objective-item i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.objective-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.objective-item p {
+    color: var(--gray-600);
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Animaciones */
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
-    20%, 40%, 60%, 80% { transform: translateX(8px); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
 
 @keyframes slideInUp {
@@ -556,11 +717,6 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
         gap: 1rem;
     }
     
-    .cta-stats {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
     .notification {
         right: 10px;
         left: 10px;
@@ -571,23 +727,62 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     .notification.show {
         transform: translateY(0);
     }
+    
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline-year {
+        left: -1.5rem;
+        min-width: 60px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .vision-mision-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .values-grid,
+    .objectives-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
     .form-group input,
     .form-group select,
     .form-group textarea {
-        padding: 14px 16px;
-        font-size: 0.95rem;
+        padding: 10px 14px;
+        font-size: 0.9rem;
     }
     
     .btn-submit {
-        padding: 16px 24px;
-        font-size: 1rem;
+        padding: 14px 24px;
+        font-size: 0.95rem;
     }
     
     .checkbox-label,
     .radio-label {
-        padding: 12px 0;
+        padding: 10px 12px;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    .vision-card,
+    .mision-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .value-card,
+    .objective-item {
+        padding: 1.5rem;
     }
 }
